@@ -1,38 +1,182 @@
-.App {
-  text-align: center;
+/* NETFLIX FONT İMPORT */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*MOST USED SETTINGS ARE GETTING THROUGH VARİABLES */
+
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color: #E50914;
+    --third-color: #000000;
+    --fourth-color: #333;
+    --fifth-color: #181818;
+    --primary-font: 'Bebas Neue', cursive;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* LAYOUT STYLES */
+
+body, html {
+    scroll-behavior: smooth;
+     width: 100%;
+    height: 100%;
+    background-color: var(--fifth-color);
+    color: var(--primary-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container {
+    margin: 0 auto;
+    width: 95%;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* HEADER STYLES*/ 
+#header {
+    width: 100%;
+    background-color: var(--third-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+#header .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.9rem 0;
 }
+
+
+
+.logo {
+    display: block;
+    background: url('./images/netflix-logo.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    filter: brightness(130%);
+}
+
+.introduction {
+    width: 410px;
+    height: auto;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.introduction b {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.introduction button {
+    width: 120px;
+    height: 32px;
+    border-radius: 2px;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.introduction button:first-of-type {
+    background-color: var(--secondary-color);
+    outline: none;
+    border: none;
+}
+
+.introduction button:first-of-type:focus {
+    border: 1px solid var(--primary-color);
+    outline: 1px solid var(--primary-color);
+}
+
+.introduction button:first-of-type:hover {
+    filter: brightness(110%);
+}
+
+.introduction button:nth-child(3) {
+    background: var(--third-color);
+    outline: none;
+    border: 1px solid var(--primary-color);
+}
+
+.introduction button:nth-child(3):hover {
+   background-color: var(--fourth-color);
+}
+
+
+/* MOVİES HEADER STYLES*/ 
+
+#movies-header {
+    height: auto;
+    width: 100%;
+}
+
+#movies-header .container .row {
+        max-width: 600px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 2rem;
+}
+
+#movies-header .container .row h1 {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 34px;
+        font-weight: 400;
+        color: #fff;
+        max-width: 598px;
+        font-size: 45px;
+        font-weight: 900;
+        line-height: 1.2;
+}
+
+#movies-header .container .row p {
+    display: block;
+    max-width: 598px;
+    font-size: 20px;
+    margin-top: 12px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    letter-spacing: 0.3px;
+}
+
+#movies-header .container .row p a {
+    color: var(--primary-color);
+    margin-left: 0.3rem;
+    
+}
+
+
+
+
+
+
+
+
+
+
