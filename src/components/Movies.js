@@ -1,28 +1,60 @@
 import React from 'react';
 /* import '../App.css'; */
-/* import '../node_modules/bootstrap/dist/css/bootstrap.min.css'; */
 
 
-function Movies () {
+
+function Movies (props) {
 
     return (
+        <section id="movies">
         <div className="container">
 
-            <div className="row">
+        <div className="row">
 
-                <div className="col">
+        <div className="movies-title">
+           <a href="/" className="hover-for"><h5 >Popüler Filmler</h5></a>  
+           <a href="/" className="explore-more">Daha fazlasını keşfet &#62;</a>
+        </div>
 
-                 <div className="movie-cap">
-                 <img src="https://occ-0-2706-2705.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVNvJ1GxsaFBF66ys_cYvPBpAkmcIadlHjfGGyXVXNm8719Q0CIpwdndlAr5gQ3uEEBw7CGrY3rq3G7VBbGQcnpIvJM.jpg?r=802" alt="movies">
-                </img>
-                <h5>Kral Şakir Korsanlarlar Diyarı</h5>
-                 </div>
+        <div className="movie-line" >
+        {props.popularmovies.map((movie) => (
 
-                </div>
+            <div className="movie-cap" key={movie.id}>
+           <a href="/"><img src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.poster_path}`} alt="movies" /></a>
+
+           <a href="/"><h5>{movie.name || movie.title}</h5></a>
+            </div>
+
+        ))}
+
+           </div>    
 
             </div>
 
+            <div className="row">
+
+            <div className="movies-title">
+            <a href="/" className="hover-for"><h5 >En çok bilinen filmler</h5></a>  
+            <a href="/" className="explore-more">Daha fazlasını keşfet &#62;</a>
+            </div>
+
+            <div className="movie-line" >
+            {props.famousmovies.map((movie) => (
+
+                <div className="movie-cap" key={movie.id}>
+            <a href="/"><img src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.poster_path}`} alt="movies" /></a>
+
+            <a href="/"><h5>{movie.name || movie.title}</h5></a>
+                </div>
+
+            ))}
+
+            </div>    
+
+                </div>
+
         </div>
+        </section>
     );
 }
 

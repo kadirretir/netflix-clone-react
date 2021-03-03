@@ -17,7 +17,6 @@ function Header() {
         <header id="header">
               <div className="container">
                   <div className="logo">
-                   
                   </div>
 
                   <div className="introduction">
