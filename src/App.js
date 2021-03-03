@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import Footer from './components/Footer.js';
+import Collection from './components/Collection.js';
 import Header from './components/Header.js';
 import Movies from './components/Movies.js';
 import axios from 'axios'; 
@@ -39,6 +41,10 @@ class App extends React.Component {
 
    
             <Movies popularmovies={this.state.popularmovies} famousmovies={this.state.famousmovies}/>
+
+            <Collection />
+
+            <Footer/>
 
       </>
     );

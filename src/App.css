@@ -31,6 +31,7 @@ time, mark, audio, video {
     --third-color: #000000;
     --fourth-color: #333;
     --fifth-color: #181818;
+    --sixth-color : #757575;
     --primary-font: 'Bebas Neue', cursive;
 }
 
@@ -258,6 +259,113 @@ body, html {
 }
 
 
+/* COLLECTION STYLES */
+
+#collection {
+    height: auto;
+}
+
+#collection .container .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.more-watch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 40%;
+}
+
+
+.more-watch h2 {
+    font-size: 36px;
+}
+
+.more-watch p {
+    font-size: 24px;
+    margin: 1rem 0;
+}
+
+
+.more-watch button {
+    width: 200px;
+    height: 48px;
+    border-radius: 2px;
+    font-size: 20px;
+    color: var(--primary-color);
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    outline: none;
+    border: none;
+
+}
+
+.more-watch button:hover {
+    filter: brightness(110%);
+}
+
+
+.more-watch button:focus {
+    border: 1px solid var(--primary-color);
+    outline: 1px solid var(--primary-color);
+}
+
+
+/* FOOTER STYLES  */
+
+#footer {
+    width: 100%;
+    padding: 13px 0;
+    margin-top: 1rem;
+}
+
+#footer .container  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#footer .container .row .call-us a{
+    font-size: 19px;
+}
+
+
+#footer .container .row a {
+    font-size: 16px;
+    color: var(--sixth-color);
+    text-decoration: none;
+}
+
+#footer .container .row a:hover {
+    text-decoration: underline;
+}
+
+#footer .container .row .links  {
+    display: grid;
+    grid-template-columns: max-content max-content max-content max-content;
+    grid-template-rows:  max-content max-content max-content max-content;
+    grid-column-gap: 9rem;
+    grid-row-gap: 0.9rem;
+    margin: 3rem 0;
+}
+
+#footer .container .row select {
+    padding: 12px;
+    background-color: var(--third-color);
+    background-image: none;
+    border: 1px solid #333;
+    color: var(--primary-color);
+    
+
+}
+
+
+
+
+
 
 
 
@@ -269,6 +377,15 @@ body, html {
    .movie-line {
        grid-template-columns: 1fr 1fr 1fr 1fr;
    }
+
+   #footer .container .row .links  {
+    grid-template-columns: max-content max-content max-content ;
+    grid-template-rows:  max-content max-content max-content;
+}
+
+   .more-watch {
+    width: 60%;
+}
 
     #movies .container .row:last-child .movie-line .movie-cap:nth-child(n+8){
         filter: blur(0);
@@ -288,9 +405,6 @@ body, html {
     margin-top: 7rem;
 }
 
-
-
-
 }
 
 @media screen and (max-width: 992px) {
@@ -298,11 +412,18 @@ body, html {
     .movie-line {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-    
+
+    .more-watch {
+        width: 70%;
+    }
+
+    #footer .container .row .links  {
+        grid-template-columns: max-content max-content ;
+        grid-template-rows:  max-content max-content ;
+    }
+
   }
 
-
-  
 @media screen and (max-width: 768px) {
 
     #header {
@@ -323,7 +444,7 @@ body, html {
     .introduction b {
        display: none;
     }
-
+    
     .introduction {
         align-items: flex-end;
         justify-content: flex-end;
@@ -332,18 +453,11 @@ body, html {
         margin-right: 0.5rem;
     }
 
-
-
     .movie-line {
         grid-template-columns: 1fr 1fr;
     }
+
+    .more-watch {
+        width: 90%;
+    }
   }
-
-
-
-
-
-
-
-
-
