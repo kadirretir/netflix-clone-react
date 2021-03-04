@@ -37,7 +37,7 @@ function Footer() {
 
            <div className="row">
            
-               <select>
+               <select className="select-style">
                    <option>
                        Türkçe
                    </option>

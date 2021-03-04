@@ -1,14 +1,4 @@
 import React from 'react';
-import '../App.css';
-/* import '.../node_modules/bootstrap/dist/css/bootstrap.min.css'; */
-
-/* <div className="col ">
-<span className="logo">NETFLIX</span>
-</div>
-
-<div className="col">
-
-</div> */
 
 function Header() {
 
@@ -21,7 +11,7 @@ function Header() {
 
                   <div className="introduction">
                   <b>SINIRSIZ DİZİ VE FİLM</b>
-                  <button type="button">ŞİMDİ KATIL</button>
+                    <button type="button">ŞİMDİ KATIL</button> 
                   <button type="button">OTURUM AÇ</button>
                   </div>
 

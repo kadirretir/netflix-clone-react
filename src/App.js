@@ -7,9 +7,6 @@ import Movies from './components/Movies.js';
 import axios from 'axios'; 
 require('dotenv').config();
 
-
-/*import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom"; */
-
 class App extends React.Component {
   constructor(props) {
     super(props); 
@@ -36,17 +33,14 @@ class App extends React.Component {
 
   render() {
     return (
-      <>
-            <Header/>
-
    
-            <Movies popularmovies={this.state.popularmovies} famousmovies={this.state.famousmovies}/>
-
-            <Collection />
-
-            <Footer/>
-
-      </>
+      <>
+        <Header/>
+        <Movies popularmovies={this.state.popularmovies} famousmovies={this.state.famousmovies}/>  
+        <Collection />
+        <Footer/>
+        </>
+       
     );
   }
 }

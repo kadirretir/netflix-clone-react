@@ -1,7 +1,6 @@
 import React from 'react';
 
 
-
 function Collection() {
 
     return (
@@ -15,7 +14,9 @@ function Collection() {
                    ödüllü Netflix orijinal içerikleri ve daha fazlasından oluşan kapsamlı bir 
                    kütüphaneye sahiptir. İstediğiniz her zaman, istediğiniz kadar çok şey izleyin.
                    </p>
-                   <button type="button">ŞİMDİ KATIL</button>
+                  
+                    <button className="button-red" type="button">ŞİMDİ KATIL</button>
+                    
                </div>
            </div>
            </div>

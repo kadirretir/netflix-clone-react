@@ -38,7 +38,6 @@ time, mark, audio, video {
 /* LAYOUT STYLES */
 
 body, html {
-    scroll-behavior: smooth;
      width: 100%;
     height: 100%;
     background-color: var(--fifth-color);
@@ -293,14 +292,16 @@ body, html {
 .more-watch button {
     width: 200px;
     height: 48px;
-    border-radius: 2px;
     font-size: 20px;
+}
+
+.button-red {
+    border-radius: 2px;
     color: var(--primary-color);
     cursor: pointer;
     background-color: var(--secondary-color);
     outline: none;
-    border: none;
-
+    border: none; 
 }
 
 .more-watch button:hover {
@@ -352,23 +353,14 @@ body, html {
     margin: 3rem 0;
 }
 
-#footer .container .row select {
+.select-style {
     padding: 12px;
     background-color: var(--third-color);
     background-image: none;
     border: 1px solid #333;
     color: var(--primary-color);
     
-
 }
-
-
-
-
-
-
-
-
 
 /* MEDİA QUERİES RESPONSİVE  */
 
